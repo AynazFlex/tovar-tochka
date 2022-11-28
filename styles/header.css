@@ -1,0 +1,188 @@
+.header__container {
+    display: flex;
+    max-width: 1400px;
+    margin: auto;
+    align-items: center;
+    padding: 16px 24px;
+    gap: 32px;
+}
+
+.header__logo {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    width: 170px;
+}
+
+.header__logo-img-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 11px 9px;
+    border: 1px solid rgba(153, 152, 152, 0.45);
+    border-radius: 8px;
+}
+
+.header__logo-img-container-mobile {
+    display: none;
+    width: 28px;
+    height: 28px;
+}
+
+.header__logo-img-container-mobile>img {
+    width: 22.5px;
+    height: 18.5px;
+}
+
+.header__logo-img-container>img {
+    width: 28px;
+    height: 24px;
+}
+
+.header__logo-text {
+    font-family: "SegoeUISemiBold";
+    font-size: 28px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    font-variant: small-caps;
+    color: #FFFFFF;
+}
+
+.header__search-container {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 36px;
+}
+
+.header__search-container-mobile {
+    display: none;
+    width: 28px;
+    height: 28px;
+}
+
+.header__search-button-mobile>img {
+    width: 20.14px;
+    height: 20.14px;
+}
+
+.header__search-input {
+    flex-grow: 1;
+    font-family: "SegoeUIRegular";
+    font-size: 18px;
+    line-height: 24px;
+    padding: 0px 0px 4px 0;
+    color: #FFFFFF;
+}
+
+.header__search-input::placeholder {
+    color: #FFFFFF;
+    opacity: 0.5;
+}
+
+.header__search-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    opacity: 0.4;
+}
+
+.header__navbar {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 40px;
+}
+
+.header__link {
+    font-family: "SegoeUIRegular";
+    font-size: 13px;
+    line-height: 16px;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0px 0px 3px;
+    gap: 11px;
+    width: 56px;
+    height: 56px;
+}
+
+.header__link-basket {
+    position: relative;
+}
+
+.header__basket-label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    border-radius: 16px;
+    background: #F55123;
+    left: 32px;
+    top: -4px;
+    font-family: "SegoeUIBold";
+    min-width: 16px;
+    padding: 0px 2px;
+    height: 16px;
+    font-size: 10px;
+    line-height: 18px;
+    color: #FFFFFF;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+@media screen and (max-width: 810px) {
+    .header__navbar {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .header__search-container {
+        display: none;
+    }
+
+    .header__search-container-mobile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .header__logo {
+        gap: 20px;
+        width: auto;
+    }
+
+    .header__logo-text {
+        font-size: 26px;
+        line-height: 24px;
+    }
+
+    .header__container {
+        padding: 14px 13px;
+        gap: 20px;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .header__logo {
+        align-items: flex-start;
+    }
+
+    .header__logo-img-container {
+        display: none;
+    }
+
+    .header__logo-img-container-mobile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

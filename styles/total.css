@@ -1,0 +1,191 @@
+.total {
+    background: #FFFFFF;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15), 0px 0px 1px rgba(0, 0, 0, 0.3);
+    border-radius: 16px;
+    padding: 16px 24px 24px;
+    width: 429px;
+}
+
+.total__price {
+    display: flex;
+    justify-content: space-between;
+    font-family: "SegoeUIBold";
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.01em;
+    color: #000000;
+    margin-bottom: 8px;
+}
+
+.total__info,
+.total__edit {
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+}
+
+.total__delivery-address,
+.total__return-free-info,
+.total__date,
+.total__card-numbers,
+.total__payment-info,
+.total__payment-time,
+.total__user-agreement-info {
+    font-family: "SegoeUIRegular";
+    font-size: 13px;
+    line-height: 16px;
+}
+
+.total__info {
+    display: flex;
+    justify-content: space-between;
+    font-family: "SegoeUIRegular";
+}
+
+.total__edit {
+    display: flex;
+    font-family: "SegoeUIBold";
+    justify-content: space-between;
+    margin-top: 24px;
+    align-items: center;
+}
+
+.total__delivery-address {
+    margin-top: 4px;
+    color: #000000;
+}
+
+.total__order {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 44px;
+    width: 100%;
+    background: #CB11AB;
+    border-radius: 8px;
+    font-family: "SegoeUIBold";
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+
+.total__date {
+    color: #CB11AB;
+    border-bottom: 1px dashed rgba(203, 17, 171, 0.2);
+    width: max-content;
+    margin-top: 4px;
+}
+
+.total__service-wrapper {
+    padding: 8px 8px 12px 8px;
+    background: #F6F6FA;
+    border-radius: 8px;
+    margin: 12px 0 24px 0;
+}
+
+.total__return-free {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.total__return-free-info {
+    color: #000000;
+}
+
+.total__return-free-info>span {
+    display: inline;
+    border-bottom: 1px dashed rgba(12, 180, 119, 0.2);
+    color: #0CB477;
+}
+
+.total__card-details {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 4px;
+}
+
+.total__card-numbers {
+    color: #000000;
+}
+
+.total__payment-info {
+    margin-top: 8px;
+    color: #000000;
+}
+
+.total__payment-time {
+    color: #000000;
+}
+
+.total__user-agreement {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.total__user-agreement>svg {
+    margin-top: 3.32px;
+    width: 12.51px;
+    height: 10.16px;
+}
+
+.total__user-agreement-info {
+    color: #000000;
+}
+
+.total__user-agreement-info>a {
+    display: inline;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width: 1135px) {
+    .total {
+        width: 303px;
+    }
+}
+
+@media screen and (max-width: 1010px) {
+    .total {
+        width: 500px;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .total {
+        background: #F6F6FA;
+        box-shadow: none;
+        border-radius: 0px;
+        padding: 8px 16px 0px;
+        width: 100%;
+    }
+
+    .total__edit, 
+    .total__delivery-address,
+    .total__date,
+    .total__card-details {
+        display: none;
+    }
+
+    .total__service-wrapper {
+        background: #F0ECF4;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .total__price {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    .total__service-wrapper {
+        margin: 16px 0;
+    }
+
+    .total__order {
+        margin-top: 24px;
+    }
+}

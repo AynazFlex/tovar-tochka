@@ -1,0 +1,333 @@
+.product {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.product__description {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding-top: 12px;
+    width: 397px;
+}
+
+.product__handling {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 226px;
+    padding-top: 9px;
+}
+
+.product__img-select {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.product__img-select>img {
+    border-radius: 8px;
+    width: 72px;
+    height: 96px;
+}
+
+.product__description-title {
+    font-family: "SegoeUIRegular";
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+    margin-bottom: 8px;
+}
+
+.product__properties {
+    display: flex;
+    gap: 16px;
+    font-family: "SegoeUIRegular";
+    font-size: 13px;
+    line-height: 16px;
+    color: #000000;
+    margin-bottom: 8px;
+}
+
+.product__organization {
+    margin-bottom: 4px;
+}
+
+.product__organization,
+.product__company {
+    font-family: "SegoeUIRegular";
+    font-size: 13px;
+    line-height: 16px;
+    color: #A0A0A4;
+}
+
+.product__company {
+    display: flex;
+    gap: 6px;
+}
+
+.product__company-info {
+    cursor: pointer;
+}
+
+.product__handling-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100px;
+    padding: 3px 0px 0px;
+}
+
+.product__handling-amount {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "SegoeUIRegular";
+    color: #000000;
+    width: 100px;
+    height: 44px;
+    background: #FFFFFF;
+    border-radius: 8px;
+    padding: 0 4px;
+}
+
+.product__count {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.product__handling-plus,
+.product__handling-minus {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 24px;
+    width: 24px;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -0.01em;
+}
+
+.product__limit {
+    display: inline;
+}
+
+.product__limit-info {
+    font-family: "SegoeUIRegular";
+    font-size: 13px;
+    line-height: 16px;
+    color: #FF3B30;
+}
+
+.product__state {
+    display: flex;
+    justify-content: flex-end;
+    gap: 16px;
+}
+
+.product__state-like,
+.product__state-delete {
+    width: 20px;
+    height: 20px;
+}
+
+.product__state-delete:hover>svg,
+.product__state-like:hover>svg {
+    fill: #F55123;
+}
+
+.product__price-discount {
+    margin-bottom: 5px;
+    text-align: right;
+    font-family: "SegoeUIBold";
+    color: #000000;
+}
+
+.product__total-sum {
+    display: inline;
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: -0.01em;
+}
+
+.product__valute {
+    display: inline;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.product__total-sum-more {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.product__price-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.product__price-container-mobile {
+    display: none;
+}
+
+.product__price {
+    font-family: "SegoeUIRegular";
+    position: relative;
+    font-size: 13px;
+    line-height: 16px;
+    color: #A0A0A4;
+    border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
+}
+
+.product__price::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: #A0A0A4;
+    top: 60%;
+}
+
+.product__disabled .product__description-title,
+.product__disabled .product__properties {
+    color: #A0A0A4 !important;
+}
+
+.product__properties-mobile {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .product__company {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .product {
+        flex-direction: column;
+        justify-content: stretch;
+        align-items: stretch;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .product__description {
+        width: 100%;
+    }
+
+    .product__handling {
+        width: 100%;
+        align-items: stretch;
+        padding-top: 12px;
+    }
+
+    .product__handling-panel {
+        flex-direction: row;
+        align-items: center;
+        width: auto;
+        gap: 16px;
+        padding: 0;
+    }
+
+    .product__price-container {
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .product__price-discount {
+        margin-bottom: 0px;
+    }
+
+    .product__total-sum {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .product__description-title {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .product__handling-amount {
+        width: 80px;
+        height: 32px;
+        padding: 0;
+    }
+
+    .product__count {
+        font-size: 14px;
+        line-height: 20px;
+    }
+}
+
+@media screen and (max-width: 510px) {
+    .product__img-select {
+        position: relative;
+    }
+
+    .product__img-select>label {
+        position: absolute;
+        top: 4px;
+        left: 4px;
+        background: #FFFFFF;
+        border-radius: 6px;
+    }
+
+    .product__img-select>img {
+        width: 80px;
+        height: 106px;
+    }
+
+    .product__properties-mobile {
+        font-family: "SegoeUIRegular";
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        bottom: 4px;
+        left: 4px;
+        width: 22px;
+        height: 22px;
+        background: #FFFFFF;
+        border-radius: 6px;
+        font-size: 14px;
+        line-height: 20px;
+        color: #000000;
+    }
+
+    .product__price-container-mobile {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 2px;
+        margin-bottom: 2px;
+    }
+
+    .product__price-container {
+        display: none;
+    }
+
+    .product__properties-2-point {
+        display: none;
+    }
+
+    .product__handling-panel {
+        width: 100%;
+        padding-right: 12px;
+    }
+
+    .product__state {
+        margin-left: auto;
+    }
+
+    .product__description-title {
+        display: -webkit-box;
+        overflow: hidden;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
+}

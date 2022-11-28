@@ -1,0 +1,150 @@
+.basket {
+    flex-grow: 1;
+}
+
+.basket__title {
+    margin: 12px 0 27px 0;
+    font-family: "SegoeUIBold";
+    font-size: 28px;
+    line-height: 36px;
+    letter-spacing: -0.01em;
+    color: #000000;
+}
+
+.stock {
+    margin-bottom: 40px;
+}
+
+.stock__up-panel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+    margin-bottom: 16px;
+}
+
+.stock__checkbox {
+    gap: 11px !important;
+    font-family: "SegoeUIRegular";
+}
+
+.stock__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+}
+
+.stock__container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.stock__empty {
+    font-family: "SegoeUISemiBold";
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+}
+
+.basket__sections-wrapper {
+    padding: 16px 24px 24px;
+    background: #FFFFFF;
+    border-radius: 16px;
+    margin-bottom: 16px;
+}
+
+.basket__sections-header {
+    display: flex;
+    font-family: "SegoeUIBold";
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 16px;
+}
+
+.basket__sections-title {
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.01em;
+    color: #000000;
+}
+
+.basket__sections-edit {
+    font-family: inherit;
+    font-size: 16px;
+    line-height: 24px;
+    color: #CB11AB;
+}
+
+.payment {
+    font-family: "SegoeUIRegular";
+}
+
+.payment__container {
+    display: flex;
+    font-size: 16px;
+    line-height: 24px;
+    align-items: center;
+    color: #000000;
+}
+
+.payment__numbers {
+    margin-left: 8px;
+}
+
+.payment__date {
+    margin-left: 12px;
+}
+
+.payment__message {
+    margin-top: 8px;
+    font-size: 13px;
+    line-height: 16px;
+    color: #A0A0A4;
+}
+
+@media screen and (max-width: 680px) {
+    .stock__container {
+        border: none;
+        gap: 16px;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .basket__title {
+        padding: 0 16px;
+        margin: 0 0 16px 0;
+    }
+
+    .stock {
+        margin-bottom: 48px;
+        padding: 0 16px;
+    }
+
+    .stock:last-child {
+        margin-bottom: 32px;
+    }
+
+    .basket__sections-wrapper {
+        padding: 16px 16px 24px;
+        margin-bottom: 12px;
+    }
+
+    .basket__sections-wrapper:last-child {
+        margin-bottom: 16px;
+    }
+
+    .basket__sections-title {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    .basket__sections-header {
+        margin-bottom: 8px;
+    }
+}

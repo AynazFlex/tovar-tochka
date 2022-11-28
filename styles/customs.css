@@ -1,0 +1,29 @@
+.custom-checkbox-1 {
+    display: none;
+}
+
+.custom-checkbox-1+label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.custom-checkbox-1+label::before {
+    content: '';
+    display: block;
+    cursor: pointer;
+    width: 22px;
+    height: 22px;
+}
+
+.custom-checkbox-1:not(:checked)+label::before {
+    background: url('../assets/checkbox/not-check.svg') 50%/22px 22px no-repeat
+}
+
+.custom-checkbox-1:checked+label::before {
+    background: url('../assets/checkbox/checked.svg') 50%/22px 22px no-repeat
+}
+
+.custom-checkbox-1:checked+label {
+    background: transparent !important;
+}

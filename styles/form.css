@@ -1,0 +1,107 @@
+.form {
+    display: flex;
+    flex-wrap: wrap;
+    width: 700px;
+    font-family: "SegoeUIRegular";
+}
+
+.form input {
+    font-family: inherit;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+    padding-bottom: 3px;
+    margin-bottom: 4px;
+}
+
+.form__name>input,
+.form__surname>input {
+    width: 338px;
+}
+
+.form__error {
+    font-size: 12px;
+    line-height: 14px;
+    color: #000000;
+    min-height: 14px;
+}
+
+.form__phone>input,
+.form__email>input,
+.form__inn>input {
+    width: 217.33px;
+}
+
+.form__name>label,
+.form__email>label,
+.form__phone>label,
+.form__surname>label,
+.form__inn>label {
+    opacity: 0;
+    color: #A0A0A4;
+    margin-bottom: 2px;
+    font-size: 13px;
+    line-height: 16px;
+}
+
+.form__name:focus-within>label,
+.form__email:focus-within>label,
+.form__phone:focus-within>label,
+.form__surname:focus-within>label,
+.form__inn:focus-within>label {
+    opacity: 1;
+}
+
+.form input::placeholder {
+    color: #A0A0A4;
+}
+
+.form__name:focus-within>input::placeholder,
+.form__email:focus-within>input::placeholder,
+.form__phone:focus-within>input::placeholder,
+.form__surname:focus-within>input::placeholder,
+.form__inn:focus-within>input::placeholder {
+    opacity: 0;
+}
+
+.form__name,
+.form__email,
+.form__phone {
+    margin-right: 24px;
+}
+
+@media screen and (max-width: 1260px) {
+    .form__name>input,
+    .form__surname>input {
+        width: 283px;
+    }
+
+    .form__phone>input,
+    .form__email>input,
+    .form__inn>input {
+        width: 180.67px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .form {
+        width: 100%;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .form__name,
+    .form__email,
+    .form__phone {
+        margin-right: 0px;
+    }
+
+    .form__name>input,
+    .form__email>input,
+    .form__phone>input,
+    .form__surname>input,
+    .form__inn>input {
+        width: 100%;
+    }
+}

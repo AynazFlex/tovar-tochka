@@ -1,0 +1,92 @@
+.delivery__container {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: start;
+    align-items: start;
+    gap: 16px 32px;
+    margin-bottom: 24px;
+}
+
+.delivery__address-title,
+.delivery__price-title,
+.delivery__date-title {
+    font-family: "SegoeUISemiBold";
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+}
+
+.delivery__address,
+.delivery__price {
+    font-family: "SegoeUIRegular";
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+}
+
+.dekivery__address-container {
+    display: flex;
+    margin-top: 4px;
+    gap: 8px;
+    align-items: center;
+    font-family: "SegoeUIRegular";
+    font-size: 13px;
+    line-height: 16px;
+    color: #000000;
+}
+
+.delivery__grade {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.delivery__date {
+    display: flex;
+    gap: 8px;
+}
+
+.delivery__img-container {
+    position: relative;
+}
+
+.delivery__img-container>img {
+    width: 40px;
+    height: 56px;
+    border-radius: 8px;
+}
+
+.delivery__img-count {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    background: #F55123;
+    border-radius: 16px;
+    height: 16px;
+    min-width: 16px;
+    top: -8px;
+    left: 28px;
+    padding: 1px 4px 0px;
+    z-index: 1;
+    font-family: "SegoeUISemiBold";
+    font-size: 10px;
+    line-height: 18px;
+    color: #FFFFFF;
+}
+
+@media screen and (max-width: 560px) {
+    .delivery__container {
+        display: block;
+    }
+
+    .delivery__address,
+    .delivery__price,
+    .delivery__date {
+        margin-bottom: 16px;
+    }
+
+    .delivery__date-title {
+        margin-bottom: 12px;
+    }
+}

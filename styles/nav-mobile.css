@@ -1,0 +1,52 @@
+.nav-mobile {
+    display: none;
+}
+
+.nav-mobile__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 28px;
+    height: 28px;
+}
+
+.nav-mobile__item>img {
+    max-width: 28px;
+    max-height: 28px;
+}
+
+.nav-mobile__basket {
+    position: relative;
+}
+
+.nav-mobile__basket-label {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "SegoeUIBold";
+    font-size: 10px;
+    line-height: 18px;
+    color: #FFFFFF;
+    padding: 0px 2px;
+    left: 18px;
+    min-width: 16px;
+    height: 16px;
+    top: -4px;
+    background: #F55123;
+    border-radius: 16px;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+@media screen and (max-width: 810px) {
+    .nav-mobile {
+        display: flex;
+        justify-content: center;
+        gap: 38.5px;
+        align-items: center;
+        background: #FFFFFF;
+        box-shadow: 0px -0.5px 0px rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(2.5px);
+        padding: 14px 13px;
+    }
+}
