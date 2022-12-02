@@ -1,4 +1,5 @@
-.custom-checkbox-1 {
+.custom-checkbox-1,
+.custom-radio-1 {
     display: none;
 }
 
@@ -26,4 +27,27 @@
 
 .custom-checkbox-1:checked+label {
     background: transparent !important;
+}
+
+.custom-radio-1+label {
+    display: flex;
+    gap: 4px;
+}
+
+.custom-radio-1+label::before {
+    content: '';
+    display: block;
+    cursor: pointer;
+    margin: 3px 4px 0 0;
+    min-width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.custom-radio-1:not(:checked)+label::before {
+    background: url('../assets/radio/select-no.svg') 50%/20px 20px no-repeat
+}
+
+.custom-radio-1:checked+label::before {
+    background: url('../assets/radio/selected.svg') 50%/20px 20px no-repeat
 }

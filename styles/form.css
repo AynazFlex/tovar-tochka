@@ -1,8 +1,11 @@
 .form {
-    display: flex;
-    flex-wrap: wrap;
-    width: 700px;
     font-family: "SegoeUIRegular";
+}
+
+.form__user-container {
+    display: flex;
+    gap: 24px;
+    width: 700px;
 }
 
 .form input {
@@ -13,24 +16,34 @@
     color: #000000;
     padding-bottom: 3px;
     margin-bottom: 4px;
+    width: 100%;
 }
 
-.form__name>input,
-.form__surname>input {
-    width: 338px;
+.input__error {
+    border-bottom: 1px solid #F55123 !important;
+    color: #F55123 !important;
+}
+
+.form__name,
+.form__surname {
+    width: calc(50% - 12px);
 }
 
 .form__error {
     font-size: 12px;
     line-height: 14px;
-    color: #000000;
+    color: #F55123;
     min-height: 14px;
 }
 
-.form__phone>input,
-.form__email>input,
-.form__inn>input {
-    width: 217.33px;
+.form__error-inner {
+    color: #000000 !important;
+}
+
+.form__phone,
+.form__email,
+.form__inn {
+    width: calc(33.33% - 16px);
 }
 
 .form__name>label,
@@ -45,12 +58,8 @@
     line-height: 16px;
 }
 
-.form__name:focus-within>label,
-.form__email:focus-within>label,
-.form__phone:focus-within>label,
-.form__surname:focus-within>label,
-.form__inn:focus-within>label {
-    opacity: 1;
+.label__active {
+    opacity: 1 !important;
 }
 
 .form input::placeholder {
@@ -65,43 +74,26 @@
     opacity: 0;
 }
 
-.form__name,
-.form__email,
-.form__phone {
-    margin-right: 24px;
-}
-
 @media screen and (max-width: 1260px) {
-    .form__name>input,
-    .form__surname>input {
-        width: 283px;
-    }
-
-    .form__phone>input,
-    .form__email>input,
-    .form__inn>input {
-        width: 180.67px;
+    .form__user-container {
+        width: 100%;
     }
 }
 
 @media screen and (max-width: 700px) {
-    .form {
-        width: 100%;
-        flex-direction: column;
-        gap: 16px;
+    .form__user-container {
+        display: block;
     }
 
     .form__name,
     .form__email,
-    .form__phone {
-        margin-right: 0px;
+    .form__phone,
+    .form__surname {
+        width: 100%;
+        margin-bottom: 16px;
     }
 
-    .form__name>input,
-    .form__email>input,
-    .form__phone>input,
-    .form__surname>input,
-    .form__inn>input {
+    .form__inn {
         width: 100%;
     }
 }

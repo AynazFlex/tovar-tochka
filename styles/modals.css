@@ -1,0 +1,191 @@
+.modal__wrapper {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+    background: rgba(5, 0, 10, 0.3);
+}
+
+.modal__open {
+    display: flex;
+}
+
+.modal__container {
+    position: relative;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 16px;
+    padding: 16px 22px 24px;
+}
+
+.modal__container-close {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+}
+
+.payment-select__container {
+    display: flex;
+    flex-direction: column;
+    width: 356px;
+    height: 368px;
+}
+
+.delivery-select__container {
+    display: flex;
+    flex-direction: column;
+    width: 456px;
+    min-height: 368px;
+}
+
+.delivery-buttons__chose {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+.delivery__point,
+.delivery__courier {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(50% - 4px);
+    height: 36px;
+    background: #FFFFFF;
+    border: 2px solid rgba(203, 17, 171, 0.15);
+    border-radius: 20px;
+    font-family: "SegoeUIBold";
+    font-size: 13px;
+    line-height: 16px;
+    color: #000000;
+}
+
+.delivery__btn-active {
+    border: 2px solid #CB11AB !important;
+}
+
+.payment-select__items {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.delivery-select__courier-items,
+.delivery-select__point-items {
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.delivery__select-active {
+    display: flex;
+}
+
+.delivery-select__title {
+    font-family: "SegoeUIBold";
+    font-size: 13px;
+    line-height: 16px;
+    color: #000000;
+    margin-bottom: 14px;
+}
+
+.payment-select__item,
+.delivery-select__item {
+    font-family: "SegoeUIRegular";
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+}
+
+.delivery-select__item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.delivery-select__point-star {
+    margin-top: 4px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: "SegoeUIRegular";
+    font-size: 13px;
+    line-height: 16px;
+    color: #A0A0A4;
+}
+
+.delivery-select__point-star>span {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: #000000;
+}
+
+.delivery-select__delete {
+    margin: 2px 0 0 auto;
+}
+
+.delivery-select__delete:hover>svg>path {
+    fill: #F55123;
+}
+
+.modal__container-title {
+    font-family: "SegoeUIBold";
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: -0.01em;
+    color: #000000;
+    margin-bottom: 13px;
+}
+
+.modal__container-done {
+    margin-top: auto;
+}
+
+.modal__container-done>button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 164px;
+    height: 44px;
+    background: #CB11AB;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    font-family: "SegoeUIBold";
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+    margin-top: 16px;
+}
+
+@media screen and (max-width: 500px) {
+    .modal__container {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+        padding: 16px;
+    }
+
+    .payment-select__container {
+        width: 100%;
+        height: 100%;
+    }
+
+    .delivery-select__container {
+        width: 100%;
+        height: 100%;
+    }
+
+    .modal__container-title {
+        font-family: "SegoeUISemiBold";
+    }
+
+    .modal__container-done>button {
+        width: 100%;
+    }
+}
