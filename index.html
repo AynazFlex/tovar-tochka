@@ -16,8 +16,7 @@
     <link rel="stylesheet" href="./styles/customs.css">
     <link rel="stylesheet" href="./styles/nav-mobile.css">
     <link rel="stylesheet" href="./styles/modals.css">
-    <script src="./js/interface.js" defer></script>
-    <script src="./js/forms.js" defer></script>
+    <script type="module" src="./js/main.js"></script>
     <title>ТОВАРЫ И ТОЧКА</title>
 </head>
 <body>
@@ -89,6 +88,7 @@
                     <div class="stock__up-panel">
                         <input class="custom-checkbox-1" type="checkbox" id="selectAll" name="selectAll" value="no">
                         <label class="stock__checkbox" for="selectAll">Выбрать все</label>
+                        <div class="stock__info-in-dis stock__panel-elem-close">266 товаров · 2 100 569 сом</div>
                         <button class="stock__button">
                             <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M15.3417 8.91208C14.966 9.29821 14.3477 9.30437 13.9644 8.92579L8.14183 3.17475C8.06342 3.0973 7.93715 3.09788 7.85945 3.17603L2.15281 8.91591C1.76725 9.30371 1.14293 9.3137 0.745162 8.93845C0.335488 8.55196 0.321627 7.90488 0.714373 7.5012L7.28326 0.749487C7.67588 0.345934 8.32412 0.345934 8.71674 0.749487L15.3417 7.55884C15.7082 7.93549 15.7082 8.53542 15.3417 8.91208Z" fill="#A0A0A4"/>
@@ -466,13 +466,13 @@
                         <div class="delivery__container">
                             <h6 class="delivery__address-title">Пункт выдачи</h6>
                             <div class="delivery__address">
-                                Бишкек, улица Ахматбека Суюмбаева, 12/1
+                                <span>Бишкек, улица Ахматбека Суюмбаева, 12/1</span>
                                 <div class="dekivery__address-container">
                                     <div class="delivery__grade">
                                         <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path fill-rule="evenodd" clip-rule="evenodd" d="M6.69769 1.14922C6.43817 0.528396 5.56198 0.528387 5.30244 1.14919L6.69769 1.14922ZM5.30244 1.14919L4.14719 3.90977L1.19202 4.16613C0.519264 4.22467 0.262282 5.05966 0.759713 5.49464L3.00514 7.45915L2.33207 10.3824C2.18436 11.0238 2.87792 11.5567 3.46133 11.2023L6.00032 9.65611L8.53797 11.2015C9.12269 11.5588 9.81568 11.0227 9.66861 10.3826L8.99549 7.45915L11.2402 5.49537C11.7385 5.05961 11.4793 4.22519 10.8083 4.16667L7.85294 3.91029L6.69769 1.14922" fill="#FF970D"/>
                                         </svg>
-                                        4.99                                          
+                                        <span>4.99</span>                                          
                                     </div>
                                     <div class="delivery__working">Ежедневно с 10 до 21</div>
                                 </div>
@@ -550,7 +550,7 @@
                                 </linearGradient>
                                 </defs>
                             </svg>
-                            <span class="payment__numbers">1234 56•• •••• 1234</span>
+                            1234 56•• •••• 1234
                             <span class="payment__date">01/30</span>
                         </div>
                         <div class="payment__message">Спишем оплату с карты при получении</div>
@@ -675,7 +675,7 @@
                         </linearGradient>
                         </defs>
                     </svg>
-                    <span class="total__card-numbers">1234 12•• •••• 1234</span>
+                    1234 12•• •••• 1234
                 </div>
                 <div class="total__service-wrapper">
                     <div class="total__payment-time">
@@ -779,7 +779,7 @@
                     <h6 class="delivery-select__title">Мои адреса</h6>
                     <div class="delivery-select__point-items">
                         <div class="delivery-select__item">
-                            <input checked="checked" class="custom-radio-1" type="radio" id="point_akhynbaeva_67/1" name="delivery-point" value="г. Бишкек, микрорайон Джал, улица Ахунбаева Исы, д. 67/1">
+                            <input data-star="" checked="checked" class="custom-radio-1" type="radio" id="point_akhynbaeva_67/1" name="delivery-point" value="г. Бишкек, микрорайон Джал, улица Ахунбаева Исы, д. 67/1">
                             <label for="point_akhynbaeva_67/1">
                                 <div>
                                     г. Бишкек, микрорайон Джал, улица Ахунбаева Исы, д. 67/1
@@ -802,7 +802,7 @@
                             </button>
                         </div>
                         <div class="delivery-select__item">
-                            <input checked="checked" class="custom-radio-1" type="radio" id="point_akhynbaeva_67/1_2" name="delivery-point" value="г. Бишкек, микрорайон Джал, улица Ахунбаева Исы, д. 67/1">
+                            <input data-star="4.99" checked="checked" class="custom-radio-1" type="radio" id="point_akhynbaeva_67/1_2" name="delivery-point" value="г. Бишкек, микрорайон Джал, улица Ахунбаева Исы, д. 67/1">
                             <label for="point_akhynbaeva_67/1_2">
                                 <div>
                                     г. Бишкек, микрорайон Джал, улица Ахунбаева Исы, д. 67/1
@@ -826,7 +826,7 @@
                             </button>
                         </div>
                         <div class="delivery-select__item">
-                            <input checked="checked" class="custom-radio-1" type="radio" id="point_tabishalieva_57" name="delivery-point" value="г. Бишкек, улица Табышалиева, д. 57">
+                            <input data-star="4.99" checked="checked" class="custom-radio-1" type="radio" id="point_tabishalieva_57" name="delivery-point" value="г. Бишкек, улица Табышалиева, д. 57">
                             <label for="point_tabishalieva_57">
                                 <div>
                                     г. Бишкек, улица Табышалиева, д. 57

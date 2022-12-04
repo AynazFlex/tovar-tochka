@@ -15,6 +15,10 @@
     margin-bottom: 40px;
 }
 
+.stock__mrb-16 {
+    margin-bottom: 16px !important;
+}
+
 .stock__up-panel {
     display: flex;
     justify-content: space-between;
@@ -23,6 +27,17 @@
     line-height: 24px;
     color: #000000;
     margin-bottom: 16px;
+}
+
+.stock__info-in-dis {
+    font-family: "SegoeUISemiBold";
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+}
+
+.stock__panel-elem-close {
+    display: none !important;
 }
 
 .stock__checkbox {
@@ -38,11 +53,20 @@
     height: 20px;
 }
 
+.stock__button-rotate {
+    transform: rotate(180deg)
+}
+
 .stock__container {
     display: flex;
     flex-direction: column;
     gap: 20px;
     border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.stock__container-disabled {
+    height: 0px;
+    overflow: hidden;
 }
 
 .stock__empty {
@@ -91,14 +115,11 @@
     line-height: 24px;
     align-items: center;
     color: #000000;
-}
-
-.payment__numbers {
-    margin-left: 8px;
+    gap: 8px;
 }
 
 .payment__date {
-    margin-left: 12px;
+    margin-left: 4px;
 }
 
 .payment__message {

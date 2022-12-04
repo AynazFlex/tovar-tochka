@@ -4,6 +4,7 @@
     border-radius: 16px;
     padding: 16px 24px 24px;
     width: 429px;
+    min-width: 303px;
 }
 
 .total__price {
@@ -27,7 +28,7 @@
 .total__delivery-address,
 .total__return-free-info,
 .total__date,
-.total__card-numbers,
+.total__card-details,
 .total__payment-info,
 .total__payment-time,
 .total__user-agreement-info,
@@ -128,9 +129,6 @@
     align-items: center;
     gap: 8px;
     margin-top: 4px;
-}
-
-.total__card-numbers {
     color: #000000;
 }
 
