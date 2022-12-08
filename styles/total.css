@@ -91,6 +91,11 @@
     align-items: center;
 }
 
+.total__return-free>svg {
+    min-width: 22px;
+    min-height: 22px;
+}
+
 .total__return-free-info {
     color: #000000;
 }
