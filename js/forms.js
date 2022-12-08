@@ -38,7 +38,7 @@ input_inn.addEventListener("blur", function () {
   if (!value) {
     errorEmtyInput.call(this, "Укажите индекс");
     this.nextElementSibling.classList.remove("form__error-inner");
-  } else if (value.length < 7 || value.length > 10) {
+  } else if (value.length < 7) {
     errorValidInput.call(this, "Формат: 1234567");
     this.nextElementSibling.classList.remove("form__error-inner");
   } else {
@@ -69,10 +69,8 @@ input_email.addEventListener("input", function () {
 
 input_inn.addEventListener("input", function () {
   const value = this.value;
-  const last = value[value.length - 1];
-  if (!"0123456789".includes(last))
-    input_inn.value = value.slice(0, value.length - 1);
-  if (value.length > 6 && value.length < 11) {
+  this.value = value.replace(/\D+/g, "").slice(0, 10)
+  if (value.length > 6) {
     this.nextElementSibling.textContent = "Для таможенного оформления";
     this.nextElementSibling.classList.add("form__error-inner");
     this.classList.remove("input__error");
