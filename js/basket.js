@@ -11,7 +11,11 @@ const checkboxes = Array.from(products).map(elem => elem.querySelector('.product
 
 checkboxes.forEach(elem => {
     elem.addEventListener('change', (e) => {
-        if(!e.target.checked) {
+        if(e.target.checked) {
+            if(!checkboxes.find(item => item.checked === false)) {
+                checkboxAll.checked = true
+            }
+        } else {
             checkboxAll.checked = false
         }
     })
