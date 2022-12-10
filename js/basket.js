@@ -21,6 +21,26 @@ checkboxes.forEach(elem => {
     })
 })
 
+products.forEach(product => {
+    product.addEventListener('click', function(e) {
+        const elem = e.target
+        if(elem.closest('.product__handling-minus')) {
+            const amount = this.querySelector('.product__count')
+            amount.textContent -= 1
+            this.querySelector('.product__handling-plus').disabled = false
+            if(amount.textContent === '1') elem.disabled = true
+        }
+        if(elem.closest('.product__handling-plus')) {
+            const amount = this.querySelector('.product__count')
+            const maxValue = this.querySelector('.product__limit')?.textContent
+            amount.textContent = +amount.textContent+1
+            this.querySelector('.product__handling-minus').disabled = false
+            if(amount.textContent === maxValue) elem.disabled = true
+        }
+        if(elem.closest('.product__state-delete')) this.remove()
+    })
+})
+
 
 stockButton.addEventListener('click', () => {
     stcokContainer.classList.toggle('stock__container-disabled')

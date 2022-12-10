@@ -143,6 +143,11 @@
     letter-spacing: -0.01em;
 }
 
+.product__handling-amount>button:disabled {
+    color: rgba(0, 0, 0, 0.2);
+    cursor: auto;
+}
+
 .product__limit {
     display: inline;
 }
