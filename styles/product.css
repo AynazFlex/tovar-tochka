@@ -186,6 +186,10 @@
     color: #000000;
 }
 
+.product__price>span {
+    display: inline;
+}
+
 .product__total-sum {
     display: inline;
     font-size: 20px;

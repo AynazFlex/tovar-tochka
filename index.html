@@ -96,7 +96,7 @@
                         </button>
                     </div>
                     <div class="stock__container">
-                        <div class="product">
+                        <div data-id="UZcotton" class="product">
                             <div class="product__description">
                                 <div class="product__img-select">
                                     <input checked="checked" class="custom-checkbox-1" type="checkbox" id="UZcotton" name="UZcotton" value="no">
@@ -112,7 +112,10 @@
                                             <span class="product__total-sum">522</span>
                                             <span class="product__valute">сом</span>
                                         </div>
-                                        <span class="product__price">1051 сом</span>
+                                        <span class="product__price">
+                                            <span>1051</span>
+                                            сом
+                                        </span>
                                     </div>
                                     <a href="#" class="product__description-title">Футболка UZcotton мужская</a>
                                     <div class="product__properties">
@@ -170,9 +173,10 @@
                                         <span class="product__total-sum">522</span>
                                         <span class="product__valute">сом</span>
                                     </div>
-                                    <span class="product__price">
-                                        1051 сом
-                                        <span class="product__price-dropdown">
+                                    <div class="product__price">
+                                        <span>1051</span>
+                                        сом
+                                        <div class="product__price-dropdown">
                                             <span class="product__price-dropdown-discount">
                                                 <span class="product__price-dropdown-discount-title">Скидка 55%</span>
                                                 <span class="product__price-dropdown-discount-55">-300 сом</span>
@@ -181,12 +185,12 @@
                                                 <span class="product__price-dropdown-discount-title">Скидка покупателя 10%</span>
                                                 <span class="product__price-dropdown-discount-10">-30 сом</span>
                                             </span>
-                                        </span>
-                                    </span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="product">
+                        <div data-id="case" class="product">
                             <div class="product__description">
                                 <div class="product__img-select">
                                     <input checked="checked" class="custom-checkbox-1" type="checkbox" id="case" name="case" value="no">
@@ -199,7 +203,10 @@
                                             <span class="product__total-sum product__total-sum-more">2 100 047</span>
                                             <span class="product__valute">сом</span>
                                         </div>
-                                        <span class="product__price">2 300 047 сом</span>
+                                        <span class="product__price">
+                                            <span>2 300 047</span>
+                                            сом
+                                        </span>
                                     </div>
                                     <a href="#" class="product__description-title">Силиконовый чехол картхолдер (отверстия) для карт, прозрачный кейс бампер на Apple iPhone XR, MobiSafe</a>
                                     <div class="product__properties">
@@ -251,9 +258,10 @@
                                         <span class="product__total-sum product__total-sum-more">2 100 047</span>
                                         <span class="product__valute">сом</span>
                                     </div>
-                                    <span class="product__price">
-                                        2 300 047 сом
-                                        <span class="product__price-dropdown">
+                                    <div class="product__price">
+                                        <span>2 300 047</span>
+                                        сом
+                                        <div class="product__price-dropdown">
                                             <span class="product__price-dropdown-discount">
                                                 <span class="product__price-dropdown-discount-title">Скидка 55%</span>
                                                 <span class="product__price-dropdown-discount-55">-300 сом</span>
@@ -262,12 +270,12 @@
                                                 <span class="product__price-dropdown-discount-title">Скидка покупателя 10%</span>
                                                 <span class="product__price-dropdown-discount-10">-30 сом</span>
                                             </span>
-                                        </span>
-                                    </span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="product">
+                        <div data-id="pencils" class="product">
                             <div class="product__description">
                                 <div class="product__img-select">
                                     <input checked="checked" class="custom-checkbox-1" type="checkbox" id="pencils" name="pencils" value="no">
@@ -281,7 +289,8 @@
                                             <span class="product__valute">сом</span>
                                         </div>
                                         <span class="product__price">
-                                            950 сом
+                                            <span>950</span>
+                                            сом
                                         </span>
                                     </div>
                                     <a href="#" class="product__description-title">Карандаши цветные Faber-Castell "Замок", набор 24 цвета, заточенные, шестигранные, Faber-Castell</a>
@@ -336,9 +345,10 @@
                                         <span class="product__total-sum">494</span>
                                         <span class="product__valute">сом</span>
                                     </div>
-                                    <span class="product__price">
-                                        950 сом
-                                        <span class="product__price-dropdown">
+                                    <div class="product__price">
+                                        <span>950</span>
+                                        сом
+                                        <div class="product__price-dropdown">
                                             <span class="product__price-dropdown-discount">
                                                 <span class="product__price-dropdown-discount-title">Скидка 55%</span>
                                                 <span class="product__price-dropdown-discount-55">-300 сом</span>
@@ -347,8 +357,8 @@
                                                 <span class="product__price-dropdown-discount-title">Скидка покупателя 10%</span>
                                                 <span class="product__price-dropdown-discount-10">-30 сом</span>
                                             </span>
-                                        </span>
-                                    </span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -599,12 +609,12 @@
                     <span id="total_price">2 101 063 сом</span>
                 </div>
                 <div class="total__info">
-                    <span>4 товара</span>
-                    <span>2 302 048 сом</span>
+                    <span id="amount">4 товара</span>
+                    <span id="total_price_without_discount">2 302 048 сом</span>
                 </div>
                 <div class="total__info">
                     <span>Скидка</span>
-                    <span>-200 985 сом</span>
+                    <span id="discount">-200 985 сом</span>
                 </div>
                 <div class="total__info">
                     <span>Доставка</span>

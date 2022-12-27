@@ -6,10 +6,10 @@ const input_inn = form.user_inn;
 const input_phone = form.user_phone;
 const EMAIL_REGEXP =
   /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu;
-const submit = document.body.querySelector(".total__order");
+export const submit = document.body.querySelector(".total__order");
 const total_payment_info = document.body.querySelector(".total__payment-info");
-const payment = document.body.querySelector("#payment");
-const payment_message = document.body.querySelector(".payment__message")
+export const payment = document.body.querySelector("#payment");
+const payment_message = document.body.querySelector(".payment__message");
 
 input_name.addEventListener("focus", focus);
 input_surname.addEventListener("focus", focus);
@@ -132,7 +132,6 @@ function errorEmtyInput(error_text) {
 }
 
 function errorValidInput(error_text) {
-  console.log(error_text);
   this.nextElementSibling.textContent = error_text;
   this.classList.add("input__error");
 }
