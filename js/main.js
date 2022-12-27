@@ -11,6 +11,7 @@ products.addConsumer((state) => {
   const elem = document.body.querySelector(".header__basket-label");
   elem.textContent = state.amount;
   elem.style.display = state.amount ? "flex" : "none";
+  state.products.length === 0 && stockContainer.parentNode.remove()
 });
 
 products.addConsumer((state) => {

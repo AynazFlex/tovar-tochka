@@ -20,3 +20,12 @@ stockDisableButton.addEventListener("click", () => {
   stcokDisableContainer.classList.toggle("stock__container-disabled");
   stockDisableButton.classList.toggle("stock__button-rotate");
 });
+
+
+stockDisable.addEventListener('click', (e) => {
+  const elem = e.target.closest(".product__state-delete")
+  if(elem) {
+    e.target.closest('.product').remove();
+    stockDisable.querySelectorAll('.product').length === 0 && stockDisable.remove()
+  }
+})
