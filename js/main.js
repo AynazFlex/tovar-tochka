@@ -41,8 +41,7 @@ selectAllElem.addEventListener("change", (e) => {
   products.dispatchEvent([{
     type: "SELECT_PRODUCTS",
     checked: e.target.checked,
-  }]);
-  products.dispatchEvent({ type: "CALCULATE" });
+  },{ type: "CALCULATE" }]);
 });
 
 stockContainer.querySelectorAll(".product").forEach((item) => {
