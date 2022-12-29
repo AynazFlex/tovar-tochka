@@ -38,10 +38,10 @@ products.addConsumer((state) => {
 });
 
 selectAllElem.addEventListener("change", (e) => {
-  products.dispatchEvent({
+  products.dispatchEvent([{
     type: "SELECT_PRODUCTS",
     checked: e.target.checked,
-  });
+  }]);
   products.dispatchEvent({ type: "CALCULATE" });
 });
 
@@ -55,11 +55,10 @@ stockContainer.querySelectorAll(".product").forEach((item) => {
   const deleteElem = item.querySelector(".product__state-delete");
 
   deleteElem.addEventListener("click", () => {
-    products.dispatchEvent({
+    products.dispatchEvent([{
       type: "DELETE_PRODUCT",
-      id: item.dataset.id,
-    });
-    products.dispatchEvent({ type: "CALCULATE" });
+      id: item.dataset.id
+    },{ type: "CALCULATE" }]);
     item.remove();
   });
 
@@ -84,27 +83,24 @@ stockContainer.querySelectorAll(".product").forEach((item) => {
   });
 
   checkElem.addEventListener("change", (e) => {
-    products.dispatchEvent({
+    products.dispatchEvent([{
       type: "SELECT_PRODUCT",
       checked: e.target.checked,
       id: item.dataset.id,
-    });
-    products.dispatchEvent({ type: "CALCULATE" });
+    },{ type: "CALCULATE" }]);
   });
 
   plusElem.addEventListener("click", () => {
-    products.dispatchEvent({
+    products.dispatchEvent([{
       type: "PLUS_PRODUCT",
       id: item.dataset.id,
-    });
-    products.dispatchEvent({ type: "CALCULATE" });
+    },{ type: "CALCULATE" }]);
   });
 
   minusElem.addEventListener("click", () => {
-    products.dispatchEvent({
+    products.dispatchEvent([{
       type: "MINUS_PRODUCT",
       id: item.dataset.id,
-    });
-    products.dispatchEvent({ type: "CALCULATE" });
+    },{ type: "CALCULATE" }]);
   });
 });

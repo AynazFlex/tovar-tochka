@@ -5,8 +5,8 @@ class Store {
     this.consumers = [];
   }
 
-  dispatchEvent(action) {
-    const newState = this.reducer(this.state, action);
+  dispatchEvent(actions) {
+    const newState = actions.reduce((state, action) => this.reducer(state, action), this.state)
     this.consumers.forEach((item) => item(newState));
     this.state = newState;
   }
