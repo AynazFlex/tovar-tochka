@@ -7,6 +7,10 @@
     margin-bottom: 24px;
 }
 
+.delivery__return-wrapper {
+    padding: 0;
+}
+
 .delivery__address-title,
 .delivery__price-title,
 .delivery__date-title {
@@ -26,13 +30,18 @@
 
 .dekivery__address-container {
     display: flex;
-    margin-top: 4px;
+    margin-top: 3px;
+    margin-bottom: 1px;
     gap: 8px;
     align-items: center;
     font-family: "SegoeUIRegular";
     font-size: 13px;
     line-height: 16px;
     color: #000000;
+}
+
+.delivery__disabled {
+    display: none !important;
 }
 
 .delivery__grade {
@@ -65,8 +74,8 @@
     border-radius: 16px;
     height: 16px;
     min-width: 16px;
-    top: -8px;
-    left: 28px;
+    top: -9px;
+    right: -4px;
     padding: 1px 4px 0px;
     z-index: 1;
     font-family: "SegoeUISemiBold";
@@ -81,12 +90,19 @@
     }
 
     .delivery__address,
-    .delivery__price,
-    .delivery__date {
+    .delivery__price {
         margin-bottom: 16px;
+    }
+
+    .delivery__date {
+        margin-bottom: 25px;
     }
 
     .delivery__date-title {
         margin-bottom: 12px;
+    }
+
+    .delivery__return-wrapper {
+        padding: 0 8px;
     }
 }

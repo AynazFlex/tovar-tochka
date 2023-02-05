@@ -11,8 +11,9 @@
     color: #000000;
 }
 
-.stock {
-    margin-bottom: 40px;
+.stock,
+.stock__disabled {
+    margin-bottom: 35px;
 }
 
 .stock__mrb-16 {
@@ -26,7 +27,7 @@
     font-size: 16px;
     line-height: 24px;
     color: #000000;
-    margin-bottom: 16px;
+    margin-bottom: 18px;
 }
 
 .stock__info-in-dis {
@@ -45,10 +46,14 @@
     font-family: "SegoeUIRegular";
 }
 
+.stock__checkbox>span {
+    line-height: 20px !important;
+}
+
 .stock__button {
     display: flex;
     justify-content: center;
-    align-items: center;
+    padding-top: 6px;
     width: 20px;
     height: 20px;
 }
@@ -74,6 +79,7 @@
     font-size: 16px;
     line-height: 24px;
     color: #000000;
+    padding-top: 3px;
 }
 
 .basket__sections-wrapper {
@@ -81,6 +87,10 @@
     background: #FFFFFF;
     border-radius: 16px;
     margin-bottom: 16px;
+}
+
+.basket__mt40px {
+    margin-top: 40px !important;
 }
 
 .basket__sections-header {
@@ -93,7 +103,7 @@
 
 .basket__sections-title {
     font-size: 24px;
-    line-height: 32px;
+    line-height: 31px;
     letter-spacing: -0.01em;
     color: #000000;
 }
@@ -101,7 +111,7 @@
 .basket__sections-edit {
     font-family: inherit;
     font-size: 16px;
-    line-height: 24px;
+    line-height: 28px;
     color: #CB11AB;
 }
 
@@ -123,10 +133,29 @@
 }
 
 .payment__message {
-    margin-top: 8px;
+    margin-top: 7px;
+    margin-bottom: 1px;
     font-size: 13px;
     line-height: 16px;
     color: #A0A0A4;
+}
+
+@media screen and (max-width: 1024px) {
+    .stock__empty {
+        padding-top: 2px;
+    }
+
+    .basket__sections-edit {
+        line-height: 23px;
+    }
+
+    .basket__sections-title {
+        line-height: 32px;
+    }
+
+    .basket__sections-header {
+        margin-bottom: 15px;
+    }
 }
 
 @media screen and (max-width: 680px) {
@@ -140,15 +169,26 @@
     .basket__title {
         padding: 0 16px;
         margin: 0 0 16px 0;
+        font-size: 20px;
+        line-height: 27px;
+    }
+
+    .stock__button {
+        padding-top: 8px;
+        margin-right: 4px;
     }
 
     .stock {
-        margin-bottom: 48px;
+        margin-bottom: 43px;
         padding: 0 16px;
     }
 
-    .stock:last-child {
-        margin-bottom: 32px;
+    .stock__disabled {
+        margin-bottom: 32px !important;
+    }
+
+    .basket__mt40px {
+        margin-top: 32px !important;
     }
 
     .basket__sections-wrapper {
@@ -157,7 +197,7 @@
     }
 
     .basket__sections-wrapper:last-child {
-        margin-bottom: 16px;
+        margin-bottom: 0px;
     }
 
     .basket__sections-title {

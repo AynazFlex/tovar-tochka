@@ -1,29 +1,23 @@
 @font-face { 
     font-family: "SegoeUIRegular";
-    src: url("../assets/fonts/SegoeUIRegular.eot");
-    src: url("../assets/fonts/SegoeUIRegular.eot?#iefix")format("embedded-opentype"),
-    url("../assets/fonts/SegoeUIRegular.woff") format("woff"),
-    url("../assets/fonts/SegoeUIRegular.ttf") format("truetype");
+    src: url("../assets/fonts/SegoeUI.woff") format("woff"),
+    url("../assets/fonts/SegoeUI.woff2") format("woff2");
     font-style: normal;
     font-weight: 400;
 }
 
 @font-face { 
     font-family: "SegoeUISemiBold";
-    src: url("../assets/fonts/SegoeUISemiBold.eot");
-    src: url("../assets/fonts/SegoeUISemiBold.eot?#iefix")format("embedded-opentype"),
-    url("../assets/fonts/SegoeUISemiBold.woff") format("woff"),
-    url("../assets/fonts/SegoeUISemiBold.ttf") format("truetype");
+    src: url("../assets/fonts/SegoeUI-SemiBold.woff") format("woff"),
+    url("../assets/fonts/SegoeUI-SemiBold.woff2") format("woff2");
     font-style: normal;
     font-weight: 600;
 }
 
 @font-face { 
     font-family: "SegoeUIBold";
-    src: url("../assets/fonts/SegoeUIBold.eot");
-    src: url("../assets/fonts/SegoeUIBold.eot?#iefix")format("embedded-opentype"),
-    url("../assets/fonts/SegoeUIBold.woff") format("woff"),
-    url("../assets/fonts/SegoeUIBold.ttf") format("truetype");
+    src: url("../assets/fonts/SegoeUI-Bold.woff") format("woff"),
+    url("../assets/fonts/SegoeUI-Bold.woff2") format("woff2");
     font-style: normal;
     font-weight: 700;
 }

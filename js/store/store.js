@@ -11,6 +11,10 @@ class Store {
     this.state = newState;
   }
 
+  getSelector(callback) {
+    return callback({...this.state})
+  }
+
   addConsumer(callback) {
     this.consumers.push(callback);
   }

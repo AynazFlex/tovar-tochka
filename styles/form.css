@@ -96,4 +96,13 @@
     .form__inn {
         width: 100%;
     }
+
+    .form__name>label,
+    .form__email>label,
+    .form__phone>label,
+    .form__surname>label,
+    .form__inn>label {
+        margin-bottom: 2px;
+        line-height: 8px;
+    }
 }

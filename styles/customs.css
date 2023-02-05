@@ -5,7 +5,6 @@
 
 .custom-checkbox-1+label {
     display: flex;
-    align-items: center;
     gap: 8px;
 }
 
@@ -50,4 +49,10 @@
 
 .custom-radio-1:checked+label::before {
     background: url('../assets/radio/selected.svg') 50%/20px 20px no-repeat
+}
+
+@media screen and (max-width: 500px) {
+    .custom-radio-1+label {
+        gap: 2px;
+    }
 }

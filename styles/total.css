@@ -15,7 +15,18 @@
     line-height: 32px;
     letter-spacing: -0.01em;
     color: #000000;
-    margin-bottom: 8px;
+    margin-bottom: 7px;
+}
+
+#total_price {
+    font-size: 20px;
+    line-height: 32px;
+    letter-spacing: -0.01em;
+}
+
+#total_price>span {
+    display: inline;
+    font-size: 24px;
 }
 
 .total__info,
@@ -60,7 +71,6 @@
 .total__order {
     display: flex;
     justify-content: center;
-    align-items: center;
     height: 44px;
     width: 100%;
     background: #CB11AB;
@@ -69,6 +79,7 @@
     font-size: 16px;
     line-height: 24px;
     color: #FFFFFF;
+    padding-top: 8px;
 }
 
 .total__date {
@@ -144,13 +155,14 @@
 
 .total__payment-time {
     color: #000000;
+    line-height: 21px;
 }
 
 .total__user-agreement {
     display: flex;
     align-items: flex-start;
-    gap: 8px;
-    margin-top: 12px;
+    gap: 11px;
+    margin-top: 11px;
 }
 
 .total__user-agreement>svg {
@@ -202,7 +214,7 @@
         background: #F6F6FA;
         box-shadow: none;
         border-radius: 0px;
-        padding: 8px 16px 0px;
+        padding: 5px 16px 0px;
         width: 100%;
     }
 
@@ -216,12 +228,17 @@
     .total__service-wrapper {
         background: #F0ECF4;
     }
+
+    #total_price>span {
+        font-size: 20px;
+    }
 }
 
 @media screen and (max-width: 425px) {
     .total__price {
         font-size: 20px;
         line-height: 28px;
+        margin-bottom: 4px;
     }
 
     .total__service-wrapper {
@@ -229,6 +246,10 @@
     }
 
     .total__order {
-        margin-top: 24px;
+        margin-top: 26px;
+    }
+
+    .total__user-agreement {
+        gap: 13px;
     }
 }

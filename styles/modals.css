@@ -183,9 +183,40 @@
 
     .modal__container-title {
         font-family: "SegoeUISemiBold";
+        margin-bottom: 17px;
     }
 
     .modal__container-done>button {
         width: 100%;
+        align-items: flex-start;
+        padding-top: 6px;
+    }
+
+    .modal__container-close {
+        top: 22px;
+        right: 15px
+    }
+
+    .delivery__point,
+    .delivery__courier {
+        height: 38px;
+        align-items: flex-start;
+        padding-top: 7px;
+    }
+
+    .delivery-buttons__chose {
+        margin-bottom: 26px;
+    }
+
+    .delivery-select__point-star {
+        line-height: 15px;
+    }
+
+    .payment-select__items {
+        gap: 15px;
+    }
+
+    .payment-select__items label {
+        gap: 4px !important;
     }
 }

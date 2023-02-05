@@ -11,7 +11,7 @@ products.addConsumer((state) => {
   const elem = document.body.querySelector(".header__basket-label");
   elem.textContent = state.amount;
   elem.style.display = state.amount ? "flex" : "none";
-  state.products.length === 0 && stockContainer.parentNode.remove()
+  state.products.length === 0 && stockContainer.parentNode.remove();
 });
 
 products.addConsumer((state) => {
@@ -23,8 +23,8 @@ products.addConsumer((state) => {
   const amount = state.amount;
   const amountText = amount === 1 ? "товар" : amount < 5 ? "товара" : "товаров";
   document.body.querySelector(
-    "#total_price"
-  ).textContent = `${totalDiscount} сом`;
+    "#total_price>span"
+  ).textContent = totalDiscount;
   document.body.querySelector(
     "#total_price_without_discount"
   ).textContent = `${total} сом`;
@@ -37,11 +37,44 @@ products.addConsumer((state) => {
   selectAllElem.checked = state.selectAll;
 });
 
+function deliveryProduct(product, productAmount) {
+  product.textContent = productAmount;
+  productAmount <= 1 ? product.classList.add('delivery__disabled') : product.classList.remove('delivery__disabled')
+}
+
+products.addConsumer(state => {
+  const [UZcotton, case1, pencils, case2] = document.querySelectorAll(".delivery__img-count")
+  state.products.forEach(product => {
+    const productAmount = product.productAmount
+    switch (product.id) {
+      case "UZcotton": {
+        deliveryProduct(UZcotton, productAmount)
+        break;
+      }
+      case "case": {
+        if(productAmount > 16) deliveryProduct(case1, productAmount - 16)
+        else {
+          case1.textContent = 0;
+          deliveryProduct(case2, productAmount)
+        }
+        break;
+      }
+      case "pencils": {
+        deliveryProduct(pencils, productAmount)
+      }
+    }
+  })
+})
+
 selectAllElem.addEventListener("change", (e) => {
-  products.dispatchEvent([{
-    type: "SELECT_PRODUCTS",
-    checked: e.target.checked,
-  },{ type: "CALCULATE" }]);
+  products.dispatchEvent([
+    {
+      type: "SELECT_PRODUCTS",
+      checked: e.target.checked,
+    },
+    { type: "CALCULATE" },
+  ]);
+  console.log(products.getSelector((state) => state.products))
 });
 
 stockContainer.querySelectorAll(".product").forEach((item) => {
@@ -54,10 +87,13 @@ stockContainer.querySelectorAll(".product").forEach((item) => {
   const deleteElem = item.querySelector(".product__state-delete");
 
   deleteElem.addEventListener("click", () => {
-    products.dispatchEvent([{
-      type: "DELETE_PRODUCT",
-      id: item.dataset.id
-    },{ type: "CALCULATE" }]);
+    products.dispatchEvent([
+      {
+        type: "DELETE_PRODUCT",
+        id: item.dataset.id,
+      },
+      { type: "CALCULATE" },
+    ]);
     item.remove();
   });
 
@@ -82,24 +118,35 @@ stockContainer.querySelectorAll(".product").forEach((item) => {
   });
 
   checkElem.addEventListener("change", (e) => {
-    products.dispatchEvent([{
-      type: "SELECT_PRODUCT",
-      checked: e.target.checked,
-      id: item.dataset.id,
-    },{ type: "CALCULATE" }]);
+    products.dispatchEvent([
+      {
+        type: "SELECT_PRODUCT",
+        checked: e.target.checked,
+        id: item.dataset.id,
+      },
+      { type: "CALCULATE" },
+    ]);
   });
 
   plusElem.addEventListener("click", () => {
-    products.dispatchEvent([{
-      type: "PLUS_PRODUCT",
-      id: item.dataset.id,
-    },{ type: "CALCULATE" }]);
+    products.dispatchEvent([
+      {
+        type: "PLUS_PRODUCT",
+        id: item.dataset.id,
+      },
+      { type: "CALCULATE" },
+    ]);
   });
 
   minusElem.addEventListener("click", () => {
-    products.dispatchEvent([{
-      type: "MINUS_PRODUCT",
-      id: item.dataset.id,
-    },{ type: "CALCULATE" }]);
+    products.dispatchEvent([
+      {
+        type: "MINUS_PRODUCT",
+        id: item.dataset.id,
+      },
+      { type: "CALCULATE" },
+    ]);
   });
 });
+
+

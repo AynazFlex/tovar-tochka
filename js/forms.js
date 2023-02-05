@@ -112,12 +112,12 @@ payment.addEventListener("change", (e) => {
   const checked = e.target.checked;
   if (checked) {
     submit.textContent = `Оплатить ${total_price.textContent}`;
-    total_payment_info.textContent = null;
-    payment_message.textContent = null;
+    total_payment_info.style.display = 'none';
+    payment_message.style.display = 'none';
   } else {
     submit.textContent = "Заказать";
-    total_payment_info.textContent = "Спишем оплату с карты при получении";
-    payment_message.textContent = "Спишем оплату с карты при получении";
+    total_payment_info.style.display = ''
+    payment_message.style.display = '';
   }
 });
 

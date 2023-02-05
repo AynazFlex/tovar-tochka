@@ -46,6 +46,7 @@
     letter-spacing: 0.02em;
     font-variant: small-caps;
     color: #FFFFFF;
+    padding-bottom: 5px;
 }
 
 .header__search-container {
@@ -96,7 +97,7 @@
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    gap: 40px;
+    gap: 34px;
 }
 
 .header__link {
@@ -108,14 +109,22 @@
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-    padding: 0px 0px 3px;
-    gap: 11px;
-    width: 56px;
-    height: 56px;
+    padding: 0px 0px 4px;
+    gap: 10px;
+    min-width: 56px;
+    min-height: 56px;
+}
+
+.header__link-user-text {
+    padding-left: 0px;
+}
+
+.header__link-basket-text {
+    padding-left: 7px;
 }
 
 .header__link-basket {
-    position: relative;
+    position: relative !important;
 }
 
 .header__basket-label {
@@ -125,14 +134,14 @@
     position: absolute;
     border-radius: 16px;
     background: #F55123;
-    left: 32px;
-    top: -4px;
+    left: 36px;
+    top: -3px;
     font-family: "SegoeUIBold";
     min-width: 16px;
     padding: 0px 2px;
     height: 16px;
-    font-size: 10px;
-    line-height: 18px;
+    font-size: 8px;
+    line-height: 19px;
     color: #FFFFFF;
     transform: matrix(1, 0, 0, 1, 0, 0);
 }
@@ -161,7 +170,7 @@
 
     .header__logo-text {
         font-size: 26px;
-        line-height: 24px;
+        line-height: 17px;
     }
 
     .header__container {
